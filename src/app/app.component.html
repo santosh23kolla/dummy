@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary" id="CustomTextboxComponent" [draggable]="true" (dragstart)="drag($event)">Checkbox</button>
+        <button type="button" class="btn btn-primary" id="CustomTextboxComponent" [draggable]="true" (dragstart)="drag($event)">Password</button>
+        <button type="button" class="btn btn-primary" id="CustomTextboxComponent" [draggable]="true" (dragstart)="drag($event)">Radio</button>
+        <button type="button" class="btn btn-primary" id="CustomTextboxComponent" [draggable]="true" (dragstart)="drag($event)">Textbox</button>
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-lg-10">
+      <div (drop)="drop($event)" (dragover)="allowDrop($event)" class="div1">
+        <div #parent1></div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-settingspage [(showModal)]="showmodal" [componentData]=componentData (componentDataChange)="componentDataUpdates($event)"></app-settingspage>
